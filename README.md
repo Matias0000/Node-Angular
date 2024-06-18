@@ -11,13 +11,13 @@
 - Asegúrate de tener Node.js y npm instalados.
 - Configura las variables de entorno en `.env` para la configuración del servidor.
 - Yo las subi a modo de prueba pero obviamente no se suben 
-
+- En caso de no tener sql server se dejo un docker-compose para crear una base de datos y tener una configuracion basica 
 
 ## Ejecución
 
 - Para ejecutar el backend: `cd Backend && pnpm run Den`
 - Para ejecutar el frontend: `cd Frontend && ng serve`
-
+- 
 ## Uso
 
 - Accede a la aplicación en tu navegador en `http://localhost:4200`
