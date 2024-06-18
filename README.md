@@ -1,3 +1,27 @@
+# Guia 
+
+## Instalación
+
+1. Clona el repositorio: `git clone https://github.com/Matias0000/Node-Angular`
+2. Instala las dependencias del backend: `cd Backend && pnpm/npm install`
+3. Instala las dependencias del frontend: `cd Frontend && pnpm/npm install`
+
+## Configuración
+
+- Asegúrate de tener Node.js y npm instalados.
+- Configura las variables de entorno en `.env` para la configuración del servidor.
+- Yo las subi a modo de prueba pero obviamente no se suben 
+
+
+## Ejecución
+
+- Para ejecutar el backend: `cd Backend && pnpm run Den`
+- Para ejecutar el frontend: `cd Frontend && ng serve`
+
+## Uso
+
+- Accede a la aplicación en tu navegador en `http://localhost:4200`
+
 Backend
 1. Descripción: Crear una API REST CRUD utilizando una de las siguientes
 tecnologías:
@@ -26,3 +50,6 @@ Frontend
     o Asegurarse de que la UI sea responsiva y fácil de usar.
     o Incluir manejo básico de errores y mensajes de confirmación para las
     operaciones CRUD.
+
+
+
