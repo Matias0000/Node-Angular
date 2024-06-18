@@ -1,0 +1,43 @@
+GET http://localhost:3000/api/productos
+
+
+###
+GET http://localhost:3000/api/productos/6
+
+
+###
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+
+{
+  "name":"Celular ",
+  "description":"Samsung",
+  "price":600
+}
+
+###
+
+GET http://localhost:3000/api/productos/2
+###
+
+POST http://localhost:3000/api/productos
+
+
+###
+POST http://localhost:3000/api/productos/2
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/api/productos/6
+Content-Type: application/json
+
+{
+  "name":"Plato",
+  "description":"Plato de vidrio ",
+  "price":7
+}
+
+###
+
+DELETE http://localhost:3000/api/productos/4

@@ -1,0 +1,43 @@
+<div class="header-container">
+  <h1>Lista de Productos</h1>
+  <button mat-raised-button color="primary" [routerLink]="['/product']">
+    <mat-icon>add</mat-icon>
+    Agregar Producto
+  </button>
+</div>
+
+<mat-table [dataSource]="products" class="mat-elevation-z8 full-width">
+  <!-- Columnas -->
+  <ng-container matColumnDef="Name">
+    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{ product.Name }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Description">
+    <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{ product.Description }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Price">
+    <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
+    <mat-cell *matCellDef="let product"> {{ product.Price | currency }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef> Acciones </mat-header-cell>
+    <mat-cell *matCellDef="let product">
+      <button mat-raised-button color="warn" (click)="deleteProduct(product.ID)">
+        <mat-icon>delete</mat-icon>
+        Eliminar
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['/product', product.ID]">
+        <mat-icon>edit</mat-icon>
+        Editar
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Filas de la tabla -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

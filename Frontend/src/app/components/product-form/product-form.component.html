@@ -1,0 +1,30 @@
+<div class="form-container">
+  <h1>{{ productId ? 'Editar Producto' : 'Agregar Producto' }}</h1>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="product-form">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Descripción</mat-label>
+      <input matInput formControlName="description" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="price" required>
+    </mat-form-field>
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit">
+        <mat-icon>{{ productId ? 'save' : 'add' }}</mat-icon>
+        {{ productId ? 'Actualizar' : 'Crear' }}
+      </button>
+      <button mat-raised-button color="warn" type="button" (click)="onCancel()">
+        <mat-icon>cancel</mat-icon>
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

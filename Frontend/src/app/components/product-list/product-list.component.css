@@ -1,0 +1,66 @@
+/* Estilos para la tabla */
+.mat-table {
+  width: 100%;
+  overflow-x: auto; /* Permite scroll horizontal si la tabla es muy ancha */
+}
+
+/* Estilos para los botones */
+.mat-raised-button, .mat-icon-button {
+  margin: 4px; /* Espaciado entre botones */
+  min-width: 0; /* Para evitar que el ancho mínimo sea muy grande */
+  width: auto; /* Ancho automático según el contenido */
+}
+
+.btn-blue {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #1976D2;
+}
+
+/* Estilos para el contenedor del encabezado */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 16px; /* Añadir padding para mejor separación */
+  background-color: #f0f0f0; /* Color de fondo para el encabezado */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-container h1 {
+    margin-bottom: 12px; /* Separación entre título y botón en vista móvil */
+  }
+  
+  .mat-raised-button, .mat-icon-button {
+    margin-bottom: 8px; /* Espaciado entre botones en vista móvil */
+  }
+}
+button {
+  margin: 8px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.add-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
